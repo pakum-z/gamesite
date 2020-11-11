@@ -10,5 +10,5 @@ class HomePage(ListView):
 	queryset = GameInfo.objects.all()
 	template_name = "main.html"
 	extra_context = {
-		"title": "Главная",
+		"title": str(GameInfo.objects.all().count()) + " лучших игры современности",
 	}
